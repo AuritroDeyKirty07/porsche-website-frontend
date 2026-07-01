@@ -1,143 +1,119 @@
 document.addEventListener('DOMContentLoaded', () => {
-            // Scroll Reveal
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.15
-            };
+    // Navbar scroll effect
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
 
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-
-            const scrollElements = document.querySelectorAll('.scroll-reveal');
-            scrollElements.forEach(el => {
-                observer.observe(el);
-            });
-            
-            // Navbar scroll effect
-            const navbar = document.querySelector('.navbar');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    navbar.classList.add('scrolled');
-                } else {
-                    navbar.classList.remove('scrolled');
-                }
-            });
-
-            // Menu Overlay Logic
-            const menuBtn = document.getElementById('menuOpenBtn');
-            const menuCloseBtn = document.getElementById('menuCloseBtn');
-            const menuOverlay = document.getElementById('menuOverlay');
-            const menuBackdrop = document.getElementById('menuBackdrop');
-            const navAccountBtn = document.getElementById('navAccountBtn');
-
-            const openMenu = () => {
-                menuOverlay.classList.add('open');
-                document.body.style.overflow = 'hidden';
-            };
-
-            const closeMenu = () => {
-                menuOverlay.classList.remove('open');
-                document.body.style.overflow = 'auto';
-            };
-
-            menuBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                openMenu();
-            });
-
-            menuCloseBtn.addEventListener('click', closeMenu);
-            menuBackdrop.addEventListener('click', (e) => {
-                if(e.target === menuBackdrop) {
-                    closeMenu();
-                }
-            });
-
-            // Sidebar Tab Switching Logic
-            const tabItems = document.querySelectorAll('.menu-list li[data-tab], .menu-account[data-tab]');
-            const tabContents = document.querySelectorAll('.tab-content');
-
-            const activateTab = (tabId) => {
-                // Remove active classes
-                tabItems.forEach(item => item.classList.remove('active'));
-                tabContents.forEach(content => content.classList.remove('active'));
-
-                // Add active class to corresponding tab and content
-                const activeItem = Array.from(tabItems).find(item => item.getAttribute('data-tab') === tabId);
-                const activeContent = document.getElementById('tab-' + tabId);
-
-                if (activeItem) activeItem.classList.add('active');
-                if (activeContent) activeContent.classList.add('active');
-            };
-
-            tabItems.forEach(item => {
-                item.addEventListener('click', () => {
-                    const tabId = item.getAttribute('data-tab');
-                    activateTab(tabId);
-                });
-            });
-
-            if (navAccountBtn) {
-                navAccountBtn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    activateTab('account');
-                    openMenu();
-                });
+        // Background color change based on scroll Y
+        const journey = document.querySelector('.journey');
+        if (journey) {
+            const rect = journey.getBoundingClientRect();
+            if (rect.top < window.innerHeight * 0.4 && rect.bottom > window.innerHeight * 0.2) {
+                document.body.classList.add('bg-black');
+            } else {
+                document.body.classList.remove('bg-black');
             }
+        }
+    });
 
-            // Hero Video Pause/Play Logic
-            const heroVideo = document.getElementById('heroVideo');
-            const heroPauseBtn = document.getElementById('heroPauseBtn');
-            const pauseIcon = document.getElementById('pauseIcon');
-            const playIcon = document.getElementById('playIcon');
+    // Menu Overlay Logic
+    const openMenu = () => {
+        document.querySelector('.overlay').classList.add('open');
+        document.body.style.overflow = 'hidden';
+    };
+    const closeMenu = () => {
+        document.querySelector('.overlay').classList.remove('open');
+        document.body.style.overflow = 'auto';
+    };
 
-            if (heroVideo && heroPauseBtn) {
-                heroPauseBtn.addEventListener('click', () => {
-                    if (heroVideo.paused) {
-                        heroVideo.play();
-                        pauseIcon.style.display = 'block';
-                        playIcon.style.display = 'none';
-                    } else {
-                        heroVideo.pause();
-                        pauseIcon.style.display = 'none';
-                        playIcon.style.display = 'block';
-                    }
-                });
-            }
-
-            // Journey Section Background Scroll Logic
-            const journeySection = document.getElementById('journeySection');
-            if (journeySection) {
-                const bgObserver = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        // Change background when the section is at least 15% visible
-                        if (entry.isIntersecting) {
-                            document.body.classList.add('bg-black');
-                        } else {
-                            document.body.classList.remove('bg-black');
-                        }
-                    });
-                }, { threshold: 0.15 });
-                bgObserver.observe(journeySection);
-            }
-
-            // Model Cards Video Hover Logic
-            document.querySelectorAll('.model-journey-card').forEach(card => {
-                const video = card.querySelector('.model-journey-video');
-                if (video) {
-                    card.addEventListener('mouseenter', () => {
-                        video.play().catch(e => console.log('Video play error:', e));
-                    });
-                    card.addEventListener('mouseleave', () => {
-                        video.pause();
-                        video.currentTime = 0;
-                    });
-                }
-            });
+    const menuBtn = document.querySelector('.menubtn');
+    if (menuBtn) {
+        menuBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openMenu();
         });
+    }
+
+    const closeBtn = document.querySelector('.closebtn');
+    if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+    
+    const backdrop = document.querySelector('.backdrop');
+    if (backdrop) {
+        backdrop.addEventListener('click', (e) => {
+            if(e.target === backdrop) {
+                closeMenu();
+            }
+        });
+    }
+
+    // Sidebar Tab Switching Logic
+    const tabItems = document.querySelectorAll('.list li[data-tab], .account[data-tab]');
+    const tabContents = document.querySelectorAll('.tab');
+
+    const activateTab = (tabId) => {
+        tabItems.forEach(item => item.classList.remove('active'));
+        tabContents.forEach(content => content.classList.remove('active'));
+
+        const activeItem = Array.from(tabItems).find(item => item.getAttribute('data-tab') === tabId);
+        const activeContent = document.querySelector(`.tab[data-content="${tabId}"]`);
+
+        if (activeItem) activeItem.classList.add('active');
+        if (activeContent) activeContent.classList.add('active');
+    };
+
+    tabItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const tabId = item.getAttribute('data-tab');
+            activateTab(tabId);
+        });
+    });
+
+    // Assume account button is the last icon link in navbar
+    const icons = document.querySelectorAll('.icon');
+    const accountBtn = icons.length > 1 ? icons[icons.length - 1] : null;
+    if (accountBtn) {
+        accountBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            activateTab('account');
+            openMenu();
+        });
+    }
+
+    // Hero Video Pause/Play Logic
+    const heroVideo = document.querySelector('.herovideo');
+    const pauseBtn = document.querySelector('.pausebtn');
+    const pauseIcon = document.querySelector('.pause-icon');
+    const playIcon = document.querySelector('.play-icon');
+
+    if (heroVideo && pauseBtn) {
+        pauseBtn.addEventListener('click', () => {
+            if (heroVideo.paused) {
+                heroVideo.play();
+                if(pauseIcon) pauseIcon.style.display = 'block';
+                if(playIcon) playIcon.style.display = 'none';
+            } else {
+                heroVideo.pause();
+                if(pauseIcon) pauseIcon.style.display = 'none';
+                if(playIcon) playIcon.style.display = 'block';
+            }
+        });
+    }
+    
+    // Model Cards Video Hover Logic (using play/pause API since it cannot be fully pure CSS without JS for video)
+    document.querySelectorAll('.journeycard').forEach(card => {
+        const video = card.querySelector('.journeyvideo');
+        if (video) {
+            card.addEventListener('mouseenter', () => {
+                video.play().catch(e => console.log('Video play error:', e));
+            });
+            card.addEventListener('mouseleave', () => {
+                video.pause();
+                video.currentTime = 0;
+            });
+        }
+    });
+});
