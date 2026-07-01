@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Navbar scroll effect
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -8,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
             navbar.classList.remove('scrolled');
         }
 
-        // Background color change based on scroll Y
         const journey = document.querySelector('.journey');
         if (journey) {
             const rect = journey.getBoundingClientRect();
@@ -20,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Menu Overlay Logic
+
     const openMenu = () => {
         document.querySelector('.overlay').classList.add('open');
         document.body.style.overflow = 'hidden';
@@ -50,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Sidebar Tab Switching Logic
+
     const tabItems = document.querySelectorAll('.list li[data-tab], .account[data-tab]');
     const tabContents = document.querySelectorAll('.tab');
 
@@ -72,7 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Assume account button is the last icon link in navbar
     const icons = document.querySelectorAll('.icon');
     const accountBtn = icons.length > 1 ? icons[icons.length - 1] : null;
     if (accountBtn) {
@@ -83,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Hero Video Pause/Play Logic
+
     const heroVideo = document.querySelector('.herovideo');
     const pauseBtn = document.querySelector('.pausebtn');
     const pauseIcon = document.querySelector('.pause-icon');
@@ -103,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    // Model Cards Video Hover Logic (using play/pause API since it cannot be fully pure CSS without JS for video)
+
     document.querySelectorAll('.journeycard').forEach(card => {
         const video = card.querySelector('.journeyvideo');
         if (video) {
