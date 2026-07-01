@@ -16,7 +16,7 @@
 :root {
     --font-primary: 'Porsche Next', Arial, sans-serif;
     --transition-speed: 0.3s;
-    --border-radius: 24px;
+    --border-radius: 18px;
     background: var(--p-model-signature-color, var(--p-color-primary)) !important;
 }
 * {
@@ -51,13 +51,13 @@ a {
     z-index: 1000;
     color: #fff;
     transition: background-color var(--transition-speed);
-    height:95px;
+    height:71.25px;
 }
 .navcontainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 90px;
+    padding: 11.25px 67.50px;
     height:100%;
 }
 .navleft, .navright {
@@ -69,27 +69,27 @@ a {
     justify-content: center;
 }
 .porsche-text-logo {
-    font-size: 1.5rem;
-    letter-spacing: 4px;
+    font-size: 1.12rem;
+    letter-spacing: 3px;
     font-weight: 600;
 }
 .navright {
     display: flex;
     justify-content: flex-end;
-    gap: 20px;
+    gap: 15px;
 }
 .navbtn {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
-    font-size: 1.3rem;
+    gap: 9px;
+    font-size: 0.98rem;
     font-weight: 600;
 }
 .menuicon {
     display: flex;
     flex-direction: column;
-    gap: 4px;
-    width: 20px;
+    gap: 3px;
+    width: 15px;
 }
 .menuicon span {
     display: block;
@@ -134,12 +134,12 @@ a {
     transform: translateX(0);
 }
 .left {
-    width: 500px;
+    width: 375px;
     background-color: #fff;
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 120px 40px 40px;
+    padding: 90px 30px 30px;
 }
 .list {
     list-style: none;
@@ -149,8 +149,8 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 40px;
-    font-size: 1.6rem;
+    padding: 12px 30px;
+    font-size: 1.20rem;
     font-weight: 600;
     cursor: pointer;
 }
@@ -159,83 +159,83 @@ a {
 }
 .list li.active {
     background-color: #f2f2f2;
-    border-radius: 6px;
+    border-radius: 4.50px;
 }
 .account {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 15px 30px;
     border-top: 1px solid #eee;
     cursor: pointer;
 }
 .accountleft {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 9px;
 }
 .right {
-    width: 600px;
+    width: 450px;
     background-color: #f2f2f2;
     height: 100%;
-    padding: 100px 98px 40px;
+    padding: 75px 73.50px 30px;
     overflow-y: auto;
 }
 .models {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 22.50px;
 }
 .model {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
+    gap: 7.50px;
     cursor: pointer;
 }
 .modelpills {
     display: flex;
     flex-direction: row;
-    gap: 8px;
+    gap: 6px;
     flex-wrap: wrap;
 }
 .modelname {
-    font-size: 1.8rem;
+    font-size: 1.35rem;
     font-weight: lighter;
 }
 .modelimg {
     width: 100%;
-    height: 150px;
+    height: 112.50px;
     object-fit: contain;
 }
 .pillsmall {
     background-color: #fff;
     color: #000;
-    padding: 4px 10px;
-    border-radius: 12px;
-    font-size: 1rem;
+    padding: 3px 7.50px;
+    border-radius: 9px;
+    font-size: 0.75rem;
     font-weight: 500;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 2.25px rgba(0,0,0,0.1);
 }
 .tab {
     display: none;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
     animation: fadeIn 0.3s ease-out;
 }
 .tab.active {
     display: flex;
 }
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
+    from { opacity: 0; transform: translateY(7.50px); }
     to { opacity: 1; transform: translateY(0); }
 }
 .link {
-    font-size: 1.5rem;
+    font-size: 1.12rem;
     color: #111;
     cursor: pointer;
     text-decoration: none;
-    padding: 8px 0;
+    padding: 6px 0;
     transition: color 0.2s;
     display: flex;
     align-items: center;
@@ -246,49 +246,49 @@ a {
 }
 .welcome {
     background: #fff;
-    border-radius: 16px;
-    padding: 30px;
+    border-radius: 12px;
+    padding: 22.50px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-    margin-bottom: 10px;
+    gap: 12px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+    margin-bottom: 7.50px;
 }
 .welcome h3 {
-    font-size: 1.5rem;
+    font-size: 1.12rem;
     font-weight: 500;
 }
 .welcome p {
     color: #666;
-    font-size: 0.95rem;
+    font-size: 0.71rem;
 }
 .btnblack {
     background-color: #000;
     color: #fff;
-    padding: 14px 24px;
-    border-radius: 8px;
+    padding: 10.50px 18px;
+    border-radius: 6px;
     text-align: center;
     font-weight: 500;
     transition: background-color 0.2s;
     display: block;
-    margin-top: 10px;
+    margin-top: 7.50px;
 }
 .btnblack:hover {
     background-color: #222;
 }
 .label {
     color: #888;
-    font-size: 1.3rem;
-    margin-top: 20px;
-    margin-bottom: 4px;
+    font-size: 0.98rem;
+    margin-top: 15px;
+    margin-bottom: 3px;
 }
 .electric {
     position: relative;
-    border-radius: 20px;
+    border-radius: 15px;
     overflow: hidden;
     aspect-ratio: 16/9;
     cursor: pointer;
-    margin-bottom: 10px;
+    margin-bottom: 7.50px;
 }
 .electric img {
     width: 100%;
@@ -310,21 +310,21 @@ a {
 }
 .electrictext {
     position: absolute;
-    bottom: 24px;
-    left: 24px;
+    bottom: 18px;
+    left: 18px;
     color: #fff;
-    font-size: 1.3rem;
+    font-size: 0.98rem;
     font-weight: 400;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 9px;
 }
 .circlesmall {
-    width: 28px;
-    height: 28px;
+    width: 21px;
+    height: 21px;
     border-radius: 50%;
     background: rgba(255,255,255,0.25);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(3px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -332,15 +332,15 @@ a {
 .backdrop {
     flex-grow: 1;
     background-color: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(6px);
     position: relative;
 }
 .closebtn {
     position: absolute;
-    top: 30px;
-    left: 30px;
-    width: 48px;
-    height: 48px;
+    top: 22.50px;
+    left: 22.50px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     background-color: rgba(255,255,255,0.15);
     border: none;
@@ -388,24 +388,24 @@ a {
 .herocontent {
     position: relative;
     z-index: 3;
-    padding-left: 180px;
-    margin-top: 110px;
+    padding-left: 135px;
+    margin-top: 82.50px;
 }
 .title {
-    font-size: 7rem;
+    font-size: 5.25rem;
     color: #fff;
     line-height: 1.1;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     font-weight: 400;
 }
 .btntranslucent {
     display: inline-block;
-    padding: 14px 32px;
+    padding: 10.50px 24px;
     background-color: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(6px);
     color: #fff;
-    border-radius: 8px;
-    font-size: 1.1rem;
+    border-radius: 6px;
+    font-size: 0.83rem;
     transition: background-color var(--transition-speed);
 }
 .btntranslucent:hover {
@@ -413,13 +413,13 @@ a {
 }
 .pausebtn {
     position: absolute;
-    bottom: 40px;
-    right: 40px;
-    width: 80px;
-    height: 80px;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     background-color: rgba(255,255,255,0.15);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(6px);
     border: none;
     color: #fff;
     display: flex;
@@ -432,21 +432,21 @@ a {
     background-color: rgba(255,255,255,0.25);
 }
 .highlights {
-    height: 500px;
-    padding: 100px 40px;
+    height: 375px;
+    padding: 75px 30px;
     background-color: transparent;
     justify-items: center;
     align-content: center;
 }
 .highlightscontainer {
     display: grid;
-    max-width: 1200px;
+    max-width: 900px;
 }
 .highlightsgrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    margin-bottom: 30px;
+    gap: 18px;
+    margin-bottom: 22.50px;
 }
 .highlight {
     position: relative;
@@ -476,21 +476,21 @@ a {
 }
 .highlightinfo {
     position: absolute;
-    bottom: 24px;
-    left: 24px;
+    bottom: 18px;
+    left: 18px;
     color: #fff;
-    font-size: 1.1rem;
+    font-size: 0.83rem;
     font-weight: 50;
 }
 .circlebtn {
     position: absolute;
-    bottom: 24px;
-    right: 24px;
-    width: 32px;
-    height: 32px;
+    bottom: 18px;
+    right: 18px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
     background-color: rgba(255,255,255,0.2);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(3px);
     color: #fff;
     display: flex;
     align-items: center;
@@ -503,41 +503,41 @@ a {
     background-color: rgba(255,255,255,0.4);
 }
 .disclaimer {
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 400;
     color: #777;
     align-items: center;
     text-align: justify;
     max-width: 100%;
     line-height: 1.4;
-    padding-bottom: 450px;
+    padding-bottom: 337.50px;
 }
 .journey {
     background-color: transparent;
 }
 .journeyheader {
     text-align: left;
-    padding: 80px 60px 60px;
-    max-width: 1600px;
+    padding: 60px 45px 45px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 .journeyheader h2 {
     font-family: var(--font-primary);
-    font-size: 90px;
+    font-size: 67.50px;
     font-weight: 400;
     color: #000;
-    line-height: 85px;
+    line-height: 63.75px;
     transition: color 0.6s ease;
 }
 .darkbg {
     background-color: transparent;
-    padding: 40px;
+    padding: 30px;
 }
 .modelsgrid {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    max-width: 1600px;
+    gap: 22.50px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 .journeyrow {
@@ -549,7 +549,7 @@ a {
     position: relative;
     border-radius: var(--border-radius);
     overflow: hidden;
-    height: 700px;
+    height: 525px;
     width: 48.5%;
     display: flex;
     flex-direction: column;
@@ -559,7 +559,7 @@ a {
 .journeycard.reveal {
     transition: opacity 0.8s ease-out, transform 0.8s ease-out, width 0.4s ease-in-out;
 }
-@media (min-width: 768px) {
+@media (min-width: 576px) {
     .journeyrow:has(.journeycard:hover) .journeycard:not(:hover) {
         width: 38.5%;
     }
@@ -599,7 +599,7 @@ a {
 }
 .logotop {
     position: absolute;
-    top: 30px;
+    top: 22.50px;
     left: 50%;
     transform: translateX(-50%);
     width: 50%;
@@ -607,13 +607,13 @@ a {
     z-index: 2;
 }
 .logotop img {
-    max-height: 40px;
-    max-width: 150px;
+    max-height: 30px;
+    max-width: 112.50px;
     object-fit: contain;
 }
 p-model-signature {
     display: inline-block;
-    height: 35px;
+    height: 26.25px;
     filter: invert(1); 
     opacity: 0.9;
 }
@@ -629,26 +629,26 @@ p-model-signature {
 }
 .journeycontent {
     position: absolute;
-    bottom: 30px;
-    left: 30px;
-    right: 30px;
+    bottom: 22.50px;
+    left: 22.50px;
+    right: 22.50px;
     z-index: 2;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
 }
 .modelpills {
     display: flex;
-    gap: 10px;
+    gap: 7.50px;
     flex-wrap: wrap;
 }
 .pill {
     background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(3px);
     color: #fff;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 0.85rem;
+    padding: 4.50px 10.50px;
+    border-radius: 15px;
+    font-size: 0.64rem;
     font-weight: 500;
 }
 .unavailable {
@@ -662,31 +662,31 @@ p-model-signature {
 }
 .journeydesc {
     color: #fff;
-    font-size: 1.1rem;
+    font-size: 0.83rem;
     max-width: 80%;
     line-height: 1.4;
 }
 .discover {
-    height: 750px;
-    padding: 80px 60px;
+    height: 562.50px;
+    padding: 60px 45px;
     background-color: transparent;
     text-align: center;
 }
 .discoverheader {
-    font-size: 3rem;
+    font-size: 2.25rem;
     font-weight: 600;
-    margin-bottom: 50px;
+    margin-bottom: 37.50px;
 }
 .discovergrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    max-width: 1300px;
+    max-width: 975px;
     margin: 0 auto;
     justify-items: center;
 }
 .discovercard {
-    width: 380px;
-    height: 380px;
+    width: 285px;
+    height: 285px;
     position: relative;
     border-radius: var(--border-radius);
     overflow: hidden;
@@ -703,10 +703,10 @@ p-model-signature {
 }
 .discoverinfo {
     position: absolute;
-    bottom: 30px;
-    left: 30px;
+    bottom: 22.50px;
+    left: 22.50px;
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.12rem;
     font-weight: 400;
     z-index: 2;
     line-height: 1.3;
@@ -721,21 +721,21 @@ p-model-signature {
 .footer {
     background-color:#010205;
     color: #fff;
-    padding: 80px 40px 40px;
+    padding: 60px 30px 30px;
 }
 .scrollupcontainer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
-    margin-bottom: 80px;
+    gap: 9px;
+    margin-bottom: 60px;
 }
 .scrollupbtn {
-    width: 48px;
-    height: 48px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     background-color: rgba(255,255,255,0.2);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(3px);
     border: none;
     color: #fff;
     display: flex;
@@ -749,59 +749,59 @@ p-model-signature {
 }
 .scrolluptext {
     color: #fff;
-    font-size: 0.9rem;
+    font-size: 0.68rem;
     cursor: default;
 }
 .footergrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    max-width: 1700px;
-    margin: 0 auto 60px;
+    gap: 30px;
+    max-width: 1275px;
+    margin: 0 auto 45px;
 }
 .footercol h4 {
-    font-size: 0.9rem;
+    font-size: 0.68rem;
     color: #777;
-    margin-bottom: 24px;
+    margin-bottom: 18px;
     font-weight: 400;
 }
 .region {
     display: flex;
     align-items: center;
-    gap: 12px;
-    font-size: 1rem;
+    gap: 9px;
+    font-size: 0.75rem;
 }
 .changelink {
     text-decoration: underline;
-    margin-left: 8px;
+    margin-left: 6px;
 }
 .mt-40 {
-    margin-top: 40px;
+    margin-top: 30px;
 }
 .footerlink {
     display: block;
-    margin-bottom: 16px;
-    font-size: 1rem;
+    margin-bottom: 12px;
+    font-size: 0.75rem;
     color: #fff;
 }
 .footerlink:hover {
     text-decoration: underline;
 }
 .footerbottom {
-    max-width: 1700px;
+    max-width: 1275px;
     margin: 0 auto;
     border-top: 1px solid #333;
-    padding-top: 40px;
+    padding-top: 30px;
 }
 .socialrow {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 60px;
+    margin-bottom: 45px;
 }
 .socialicons {
     display: flex;
-    gap: 24px;
+    gap: 18px;
 }
 .socialicons a {
     color: #fff;
@@ -812,29 +812,29 @@ p-model-signature {
 }
 .badges {
     display: flex;
-    gap: 16px;
+    gap: 12px;
 }
 .badgeimg {
-    height: 40px;
+    height: 30px;
     background-color: #333; 
 }
 .legal {
-    margin-bottom: 60px;
+    margin-bottom: 45px;
 }
 .copyright {
     color: #999;
-    font-size: 0.9rem;
-    margin-bottom: 16px;
+    font-size: 0.68rem;
+    margin-bottom: 12px;
 }
 .legallinks {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 24px;
+    gap: 6px;
+    margin-bottom: 18px;
 }
 .legallinks a {
     color: #999;
-    font-size: 0.9rem;
+    font-size: 0.68rem;
     text-decoration: underline;
 }
 .legallinks a:hover {
@@ -842,8 +842,8 @@ p-model-signature {
 }
 .disclaimersmall {
     color: #777;
-    font-size: 0.8rem;
-    margin-bottom: 12px;
+    font-size: 0.60rem;
+    margin-bottom: 9px;
     line-height: 1.5;
 }
 .disclaimersmall a {
@@ -853,8 +853,8 @@ p-model-signature {
     text-align: center;
 }
 .footerlogo .porsche-text-logo {
-    font-size: 2rem;
-    letter-spacing: 6px;
+    font-size: 1.50rem;
+    letter-spacing: 4.50px;
     color: #fff;
 }
 .reveal {
@@ -865,7 +865,7 @@ p-model-signature {
 @keyframes revealAnim {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(22.50px);
     }
     to {
         opacity: 1;
@@ -873,7 +873,7 @@ p-model-signature {
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .highlightsgrid {
         grid-template-columns: 1fr;
     }
@@ -889,13 +889,13 @@ p-model-signature {
     .socialrow {
         flex-direction: column;
         align-items: flex-start;
-        gap: 30px;
+        gap: 22.50px;
     }
     .title {
-        font-size: 4rem;
+        font-size: 3rem;
     }
     .journeyheader h2 {
-        font-size: 2.5rem;
+        font-size: 1.88rem;
     }
     .panel {
         width: 100%;
