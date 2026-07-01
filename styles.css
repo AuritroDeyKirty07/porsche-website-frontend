@@ -149,10 +149,9 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 40px;
-    font-size: 1.7rem;
+    padding: 16px 40px;
+    font-size: 1.6rem;
     font-weight: 600;
-    letter-spacing: 0.5px;
     cursor: pointer;
 }
 .list li:hover {
@@ -601,8 +600,9 @@ a {
 .logotop {
     position: absolute;
     top: 30px;
-    left: 0;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
     text-align: center;
     z-index: 2;
 }
