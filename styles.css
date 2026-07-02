@@ -1033,11 +1033,10 @@ p-model-signature {
     }
 }
 
-@media (max-width: 320px) {
-    body {
-        overflow-x: hidden;
+@media (max-width: 340px) {
+    .closebtn {
+        left: 8.5px;
     }
-    
 }
 
 .navbar {
