@@ -874,14 +874,107 @@ p-model-signature {
 }
 
 @media (max-width: 768px) {
-    .highlightsgrid {
-        grid-template-columns: 1fr;
+    .left{
+    width: 340px;
+    padding: 80px 10px 80px;
     }
+    
     .modelsgrid {
         grid-template-columns: 1fr;
     }
-    .discovergrid {
+    .discover{
+        padding: 65px 25px;
+    }
+    .discovercard{
+        width:95%;
+        height:auto;
+    }
+    .footergrid {
+        
+    }
+    .socialrow {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22.50px;
+    }
+    .title {
+        font-size: 3rem;
+    }
+    .journeyheader h2 {
+        font-size: 2.7rem;
+    }
+    .panel {
+        width: 80%;
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 425px) {
+    body {
+        overflow-x: hidden;
+    }
+    .navcontainer {
+        padding: 10px 20px;
+    }
+    .logo svg {
+        max-width: 140px;
+        height: auto;
+    }
+    .herocontent {
+        padding-left: 20px;
+    }
+    .highlights {
+        padding: 40px 20px;
+        height: auto;
+    }
+    .highlightsgrid {
         grid-template-columns: 1fr;
+    }
+    .journeyheader {
+        padding: 40px 20px;
+    }
+    .journeyrow {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .journeycard {
+        width: 100% !important;
+    }
+    .footer {
+        padding: 40px 20px 20px;
+    }
+    .left {
+        width: 100%;
+        padding: 80px 10px 20px;
+        height: auto;
+    }
+    .right {
+        width: 100%;
+        padding: 20px 10px 80px;
+        height: auto;
+    }
+    
+    .modelsgrid {
+        grid-template-columns: 1fr;
+    }
+    .discover{
+        padding: 65px 25px;
+    }
+    .discovercard {
+        width: calc(50% - 10px);
+        height: auto;
+    }
+    .discoverinfo {
+        font-size: 0.85rem;
+        bottom: 12px;
+        left: 12px;
+    }
+    .discovergrid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        max-width: 100%;
     }
     .footergrid {
         grid-template-columns: 1fr;
@@ -895,18 +988,32 @@ p-model-signature {
         font-size: 3rem;
     }
     .journeyheader h2 {
-        font-size: 1.88rem;
+        font-size: 1.7rem;
     }
     .panel {
-        width: 100%;
+        width: 85%;
         flex-direction: column;
+        overflow-y: auto;
+        overflow-x: hidden;
     }
-    .menu-left, .right {
-        width: 100%;
+    .navbtn{
+        font-size:0.85rem;
+    }
+    .logo svg {
+        max-width: 100px;
+        padding-top: 10px;
+    }
+    .icon svg {
+        width: 18px;
+        height: 18px;
+    }
+    .navright{
+        padding-top: 6px;
+    }   
+    .disclaimer{
+        padding-bottom: 100px;
     }
 }
-
-
 
 .navbar {
     background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
