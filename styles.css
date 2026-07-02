@@ -392,7 +392,7 @@ a {
     margin-top: 82.50px;
 }
 .title {
-    font-size: 5.25rem;
+    font-size: 5.8rem;
     color: #fff;
     line-height: 1.1;
     margin-bottom: 30px;
@@ -400,12 +400,12 @@ a {
 }
 .btntranslucent {
     display: inline-block;
-    padding: 10.50px 24px;
+    padding: 15.50px 24px;
     background-color: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(6px);
     color: #fff;
-    border-radius: 6px;
-    font-size: 0.83rem;
+    border-radius: 10px;
+    font-size: 1.1rem;
     transition: background-color var(--transition-speed);
 }
 .btntranslucent:hover {
